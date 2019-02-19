@@ -304,6 +304,9 @@ public final class NVActivityIndicatorPresenter {
 
         guard let keyWindow = UIApplication.shared.keyWindow else { return }
 
+        activityIndicatorView.isUserInteractionEnabled = false
+        containerView.isUserInteractionEnabled = false
+        
         keyWindow.addSubview(containerView)
 
         // Add constraints for `containerView`.
